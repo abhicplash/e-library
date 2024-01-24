@@ -5,7 +5,7 @@ function Books() {
     const [book, setBook] = useState([]);
     const [searchTerm, setSearchTerm] = useState("wonder");
     useEffect(() => {
-        if (searchTerm != "") {
+        if (searchTerm !== "") {
             getBookData()
         }
     }, [searchTerm]);
