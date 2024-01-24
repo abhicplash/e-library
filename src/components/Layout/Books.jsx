@@ -4,10 +4,12 @@ import Shimmer from "./Shimmer";
 function Books() {
     const [book, setBook] = useState([]);
     const [searchTerm, setSearchTerm] = useState("wonder");
+
     useEffect(() => {
         if (searchTerm !== "") {
             getBookData()
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchTerm]);
     async function getBookData() {
         const BookData = await fetch(
